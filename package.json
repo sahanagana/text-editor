@@ -4,12 +4,13 @@
   "description": "A simple desktop text editor.",
   "main": "main.js",
   "scripts": {
-    "start" : "electron .",
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "sahanagana",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^25.2.0"
+    "electron": "^25.2.0",
+    "electron-reloader": "^1.2.3"
   }
 }
