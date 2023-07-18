@@ -1,23 +1,34 @@
 
 //imports from electron
 const { BrowserWindow, app } = require("electron")
-
+//path for renderer
+const path = require('path');
 //electron reloader setup
 require("electron-reloader")(module);
 
+let mainWindow;
+
 //function that creates a window when the application is opened
 const createWindow = () => {
-
 	//window characteristics
 	const mainWindow = new BrowserWindow({
+		autoHideMenuBar: true,
 		width: 900,
-		height: 700
+		height: 700,
+		//hide titlebar
+		//frame: false,
+		//rendering for custom titlebar
+		webPreferences: {
+			//nodeIntegration: true,
+			preload: path.join(__dirname, 'renderer.js'), // Load the renderer.js file
+		},
 	})
 	
 	//automatically open devtools
 	mainWindow.webContents.openDevTools();
 	//html file to load for window
 	mainWindow.loadFile("index.html");
+
 };
 
 //app module controls lifecycle of app
