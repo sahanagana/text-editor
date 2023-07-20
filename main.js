@@ -15,13 +15,6 @@ const createWindow = () => {
 		autoHideMenuBar: true,
 		width: 900,
 		height: 700,
-		//hide titlebar
-		//frame: false,
-		//rendering for custom titlebar
-		webPreferences: {
-			//nodeIntegration: true,
-			preload: path.join(__dirname, 'renderer.js'), // Load the renderer.js file
-		},
 	})
 	
 	//automatically open devtools
