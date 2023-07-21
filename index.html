@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatiblex" content="IE-edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- prevent XSS and data injection -->
-		<meta http-equiv="Content-Security-Policy", content="script-src 'self';" />
+		<meta http-equiv="Content-Security-Policy", content="script-src 'self';"/>
 		<link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
       rel="stylesheet">
 		<link rel = "stylesheet" href="styles.css" />
@@ -13,14 +13,14 @@
 	</head>
 	<body>
 	<div class="titlebar"> 
-		<span class ="docname">thing.txt</span>
+		<span class ="docname" id = "docname">no file selected</span>
 		<div class = "menu">
-			<button><span class="material-icons-outlined"> launch </span></button>
-			<button><span class="material-icons-outlined"> note_add </span></button>
+			<button id="opendoc"><span class="material-icons-outlined"> launch </span></button>
+			<button id="createdoc"><span class="material-icons-outlined"> note_add </span></button>
 		</div>
 	</div>
 	<main>
-		<textarea></textarea>
+		<textarea id = 'textarea' disabled></textarea>
 	</main>
 	</body>
 </html>
